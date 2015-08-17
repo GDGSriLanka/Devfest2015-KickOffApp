@@ -1,0 +1,98 @@
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ * Licensed under the MIT License
+ *
+ * Sass/SCSS source: http://goo.gl/UhXKg
+ * PSD by Vin Thomas: http://goo.gl/n1M2e
+ */
+
+body {
+  font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #2a2a2a;
+}
+
+.container {
+  width: 400px;
+  text-align: center;
+}
+
+.container .progress {
+  margin: 0 auto;
+  width: 20px;
+  height: 200px;
+}
+
+.progress {
+  background: #f27011;
+}
+
+.progress-bar {
+  height: 16px;
+/*	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));*/
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: height, background-color;
+  -moz-transition-property: height, background-color;
+  -o-transition-property: height, background-color;
+  transition-property: height, background-color;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/*
+ * Note: using adjacent or general sibling selectors combined with
+ *       pseudo classes doesn't work in Safari 5.0 and Chrome 12.
+ *       See this article for more info and a potential fix:
+ *       http://css-tricks.com/webkit-sibling-bug/
+ */
+
+#five:checked ~ .progress > .progress-bar {
+  height: 5%;
+  background-color: #000000;
+}
+
+#twentyfive:checked ~ .progress > .progress-bar {
+  height: 25%;
+  background-color: #000000;
+}
+
+#fifty:checked ~ .progress > .progress-bar {
+  height: 50%;
+  background-color: #000000;
+}
+
+#seventyfive:checked ~ .progress > .progress-bar {
+  height: 75%;
+  background-color: #000000;
+}
+
+#onehundred:checked ~ .progress > .progress-bar {
+  height: 100%;
+  background-color: #000000;
+}
+
+.radio {
+  display: none;
+}
+
+.label {
+  display: inline-block;
+  margin: 0 5px 20px;
+  padding: 3px 8px;
+  color: #aaa;
+  text-shadow: 0 1px black;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.radio:checked + .label {
+  color: white;
+  background: rgba(0, 0, 0, 0.25);
+}
