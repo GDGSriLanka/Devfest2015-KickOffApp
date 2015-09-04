@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  script(type="text/javascript").
+
+    $(document).ready(function()
+      {
+        var interval;
+        var socket = io();
+
+        socket.on('value',function(val){
+          upHeight(val);
+        });
+
+        socket.on('down',function(val){
+          downHeight(val);
+        });
+         function upHeight(val)
+         {
+           if(val>=0)
+           {
+             $('.progress-bar').css('height',val+'%');
+           }
+         }
+         function downHeight(val)
+         {
+          $('.progress-bar').css('height',val+'%');
+         }
+      });
+
+
+  .container
+    .progress
+      .progress-bar
+    .progress
+      .progress-bar
+    .progress
+      .progress-bar
+    .progress
+      .progress-bar

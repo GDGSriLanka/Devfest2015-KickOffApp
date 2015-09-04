@@ -1,0 +1,7 @@
+extends layout
+
+block content
+	script(type='text/javascript').
+		var socket = io();
+		$(document).on('click touchstart','body',function()
+		{socket.emit('action',"clicked");});
