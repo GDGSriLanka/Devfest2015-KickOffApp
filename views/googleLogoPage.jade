@@ -1,0 +1,168 @@
+extends app
+
+block content
+  style(type='text/css').
+    .blue-g {
+    background-color: #4285F4;
+    width: 20.5%;
+    padding-top: 20%;
+    margin-top: -29%;
+    margin-left: 11.5%;
+    z-index: -4;
+    float: left;
+    }
+
+    .red-o{
+    background-color: #EA4335;
+    width: 13.5%;
+    padding-top: 13%;
+    margin-top: -22%;
+    margin-left: 31.5%;
+    z-index: -4;
+    float: left;
+    }
+    .orange-o{
+    background-color: #FBBC05;
+    width: 13.6%;
+    padding-top: 13%;
+    margin-top: -22%;
+    margin-left: 44.5%;
+    z-index: -4;
+    float: left;
+
+    }
+    .blue-simple-g{
+    background-color: #4285F4;
+    width: 12.6%;
+    padding-top: 19%;
+    margin-top: -22%;
+    margin-left: 58.5%;
+    z-index: -4;
+    float: left;
+
+    }
+    .green-l{
+    background-color: #34A853;
+    width: 3.6%;
+    padding-top: 19%;
+    margin-top: -28%;
+    margin-left: 71.5%;
+    z-index: -4;
+    float: left;
+
+    }
+    .red-e{
+    background-color: #EA4335;
+    width: 13.5%;
+    padding-top: 13%;
+    margin-top: -22%;
+    margin-left: 75.5%;
+    z-index: -4;
+    float: left;
+
+    }
+
+    .blue-g-anim
+    {
+    background-color: #FFFFFF;
+    width: 20.2%;
+    padding-top: 20%;
+    margin-top: -29%;
+    margin-left: 11.5%;
+    z-index: -2;
+    float: left;
+
+    }
+    .red-o-anim{
+    background-color: #ffffff;
+    width: 13.5%;
+    padding-top: 13%;
+    margin-top: -22%;
+    margin-left: 31.5%;
+    z-index: -4;
+    float: left;
+
+    }
+    .orange-o-anim{
+    background-color: #Fff;
+    width: 13.6%;
+    padding-top: 13%;
+    margin-top: -22%;
+    margin-left: 44.5%;
+    z-index: -4;
+    float: left;
+
+    }
+
+    .blue-simple-g-anim{
+    background-color: #fff;
+    width: 12.6%;
+    padding-top: 19%;
+    margin-top: -22%;
+    margin-left: 58.5%;
+    z-index: -4;
+    float: left;
+
+    }
+    .green-l-anim{
+    background-color: #fff;
+    width: 3.6%;
+    padding-top: 19%;
+    margin-top: -28%;
+    margin-left: 71.5%;
+    z-index: -4;
+    float: left;
+
+    }
+    .red-e-anim{
+    background-color: #fff;
+    width: 13.5%;
+    padding-top: 13%;
+    margin-top: -22%;
+    margin-left: 75.5%;
+    z-index: -4;
+    float: left;
+
+    }
+    object{
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    }
+
+
+  object(data="images/Google-Logo.svg" type="image/svg+xml" width="100%")
+    img(src="images/Google-Logo.svg")
+
+  .blue-g
+  .red-o
+  .orange-o
+  .blue-simple-g
+  .green-l
+  .red-e
+
+  .blue-g-anim#blue-g-anim
+  .red-o-anim#red-o-anim
+  .orange-o-anim#orange-o-anim
+  .blue-simple-g-anim#blue-simple-g-anim
+  .green-l-anim#green-l-anim
+  .red-e-anim#red-e-anim
+
+  script(type="java/javascript").
+    setInterval(function() {
+
+    },1000);
+
+    $("#blue-g-anim").animate({
+    'padding-top' : 0},4000);
+
+    $("#red-o-anim").animate({
+    'padding-top' : 0},4000);
+    $("#orange-o-anim").animate({
+    'padding-top' : 0},4000);
+    $("#blue-simple-g-anim").animate({
+    'padding-top' : 0},4000);
+    $("#red-e-anim").animate({
+    'padding-top' : 0},4000);
+    $("#green-l-anim").animate({
+    'padding-top' : 0},4000);
